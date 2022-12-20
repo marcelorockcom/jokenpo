@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/icon.png">
+    <title>Jokenpô</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+    <div class="game">
+        <div class="header">
+            <h1>
+                <span>Jo</span><span>ken</span><span>pô</span>
+            </h1>
+        </div>
+        <div class="player">
+            <h2>You</h2>
+            <input type="radio" name="choose-user" id="pedra">
+            <label for="pedra">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150"><defs><style>.a,.b{fill:none;stroke:#1d1d1b;stroke-linecap:round;stroke-width:4.01px;}.a{stroke-linejoin:round;}.b{stroke-miterlimit:10;}</style></defs><path class="a" d="M145.72,36.28A33,33,0,0,1,139.59,69c-6.8,7.71-14.41,17-14.64,20-.4,5.44-.4,10-8.87,18.72s-28.77,38-39.39,39.77c-13.92,2.37-45.88-14.81-49.94-18.12-5-4.08-3.78-10.25.76-11.1,0,0-11.09-4-7-15,0,0-11.5-5.62-5.14-21.21,0,0-4.54-1.47-5.3-9,0,0-7.26,1-7.72-11.26S8.14,46.05,15.25,38.54,25.85,24.67,34,25s41.61,1,43,0S91.06,5,98.47,3.12C107.55.82,133.37,1.77,145.72,36.28Z"/><path class="b" d="M67,39.85s.76,14,0,19.42S60,72.82,56.26,72.82,32.81,65.47,29.33,63"/><path class="b" d="M10.11,73C7.84,51.43,22.52,42.29,28,41.15s30,11.26,30,11.26,11.71,7.3,2.93,17.81"/><path class="b" d="M15.41,82S44.46,95.23,70.08,99.58"/><path class="b" d="M20.55,103.17s27.14,12.52,48.52,14.69"/><path class="b" d="M27.51,118.19s20.34,11.64,39.83,14"/><line class="b" x1="76.99" y1="24.98" x2="88.64" y2="24.98"/><line class="b" x1="124.95" y1="88.92" x2="124.95" y2="75.21"/></svg>
+            </label>
+            <input type="radio" name="choose-user" id="papel">
+            <label for="papel">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150"><defs><style>.a,.b{fill:none;stroke:#1d1d1b;stroke-linecap:round;stroke-width:3.71px;}.a{stroke-linejoin:round;}.b{stroke-miterlimit:10;}</style></defs><path class="a" d="M115.25,2.61c8.93,1.91,24.61,7.76,31.22,25.52,2.33,6.25,1.07,13.61-3.09,18.26-5.78,6.48-13.77,16-13.66,19.32.18,5.12-.35,11.53-9.16,22.43s-37.38,45.3-42.49,50.21-10.58,4.06-13.22-3.2c0,0-8.9,14.41-15.78,12.26-5-1.57-7.36-7.51-7.1-10.55,0,0-8.19,11.93-16.53,7.37-6.29-3.44-6.25-11-6.25-11s-8.42,2.83-12.92-1-5.55-12.5-.79-19.55,44-53.58,44-53.58-7.41.06-9.65-5.23S38.8,42.47,41.44,39.42s14-15.86,16.27-20,5.92-5.82,18.08-5,21.85-.22,23.44-2.36c.75-1,3-3.44,5.06-5.68A11.61,11.61,0,0,1,115.25,2.61Z"/><path class="b" d="M64.85,135.15a11.92,11.92,0,0,1,1.32-7.8c2.2-3.85,21-25.21,21-25.21"/><path class="b" d="M42,136.86s-1.28-5.58,4.4-12.32c4.14-4.92,23.5-27.74,23.5-27.74"/><path class="b" d="M19.19,133.23s-.71-4.49,3.79-9.83S52,88.57,52,88.57"/><line class="b" x1="49.51" y1="59.08" x2="69.87" y2="34.3"/><line class="b" x1="129.72" y1="65.71" x2="128.84" y2="54.97"/></svg>
+            </label>
+            <input type="radio" name="choose-user" id="tesoura">
+            <label for="tesoura">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150"><defs><style>.a{fill:none;stroke:#1d1d1b;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3.88px;}</style></defs><path class="a" d="M116.69,3C127,5.86,141.34,14.45,147,39.71a23.54,23.54,0,0,1-5.23,20.92c-5.52,6-12.31,13.51-13,14.85-1.13,2.28.57,9.27-3.41,14.16s-24.08,27.89-28.35,32.88-8.25,9-12.8,7.59-23.33-9.87-23.33-9.87S43.82,141.57,37.65,146a9.35,9.35,0,0,1-13.79-3.75,17.55,17.55,0,0,1,2.7-18.39c4.84-6,18-19.53,18-19.53s-4.17,0-3.6-16.28c0,0-16.65,7-25.18,7.81S2.1,92.41,2.38,84.1,6.36,70.76,15,67.83s24.47-8.51,24.47-8.51-.72-11,1.56-14.61C44.24,39.61,58.3,21.44,63.68,20c4.46-1.22,25,0,25,0L99.29,8.35A17.12,17.12,0,0,1,116.69,3Z"/><path class="a" d="M40.78,58.87s28.59-8.3,29.87-11.23,0-9.76,0-9.76"/><path class="a" d="M40.93,88s23.8-11.67,25.31-10.56S51.85,96.62,44.53,104.29"/><line class="a" x1="60.93" y1="120.24" x2="79.9" y2="98.27"/><line class="a" x1="68.38" y1="111.61" x2="80.75" y2="117.64"/><line class="a" x1="56" y1="88.01" x2="59.04" y2="88.01"/><line class="a" x1="128.82" y1="75.48" x2="128.82" y2="64.57"/><line class="a" x1="88.71" y1="19.97" x2="98.1" y2="19.97"/></svg>
+            </label>
+        </div>
+        <div class="battle">
+            <div class="score-board">
+                <span class="score-player">0</span>
+                <span>x</span>
+                <span class="score-cpu">0</span>
+            </div>
+            <div class="play">
+                <button>Play</button>
+            </div>
+            <div class="playerXcpu">
+                <div class="player-battle">
+                    
+                </div>
+            </div>
+            <div class="playerXcpu">
+                <div class="cpu-battle">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="cpu">
+            <h2>cpu</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150"><defs><style>.a,.b{fill:none;stroke:#1d1d1b;stroke-linecap:round;stroke-width:4.01px;}.a{stroke-linejoin:round;}.b{stroke-miterlimit:10;}</style></defs><path class="a" d="M145.72,36.28A33,33,0,0,1,139.59,69c-6.8,7.71-14.41,17-14.64,20-.4,5.44-.4,10-8.87,18.72s-28.77,38-39.39,39.77c-13.92,2.37-45.88-14.81-49.94-18.12-5-4.08-3.78-10.25.76-11.1,0,0-11.09-4-7-15,0,0-11.5-5.62-5.14-21.21,0,0-4.54-1.47-5.3-9,0,0-7.26,1-7.72-11.26S8.14,46.05,15.25,38.54,25.85,24.67,34,25s41.61,1,43,0S91.06,5,98.47,3.12C107.55.82,133.37,1.77,145.72,36.28Z"/><path class="b" d="M67,39.85s.76,14,0,19.42S60,72.82,56.26,72.82,32.81,65.47,29.33,63"/><path class="b" d="M10.11,73C7.84,51.43,22.52,42.29,28,41.15s30,11.26,30,11.26,11.71,7.3,2.93,17.81"/><path class="b" d="M15.41,82S44.46,95.23,70.08,99.58"/><path class="b" d="M20.55,103.17s27.14,12.52,48.52,14.69"/><path class="b" d="M27.51,118.19s20.34,11.64,39.83,14"/><line class="b" x1="76.99" y1="24.98" x2="88.64" y2="24.98"/><line class="b" x1="124.95" y1="88.92" x2="124.95" y2="75.21"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150"><defs><style>.a,.b{fill:none;stroke:#1d1d1b;stroke-linecap:round;stroke-width:3.71px;}.a{stroke-linejoin:round;}.b{stroke-miterlimit:10;}</style></defs><path class="a" d="M115.25,2.61c8.93,1.91,24.61,7.76,31.22,25.52,2.33,6.25,1.07,13.61-3.09,18.26-5.78,6.48-13.77,16-13.66,19.32.18,5.12-.35,11.53-9.16,22.43s-37.38,45.3-42.49,50.21-10.58,4.06-13.22-3.2c0,0-8.9,14.41-15.78,12.26-5-1.57-7.36-7.51-7.1-10.55,0,0-8.19,11.93-16.53,7.37-6.29-3.44-6.25-11-6.25-11s-8.42,2.83-12.92-1-5.55-12.5-.79-19.55,44-53.58,44-53.58-7.41.06-9.65-5.23S38.8,42.47,41.44,39.42s14-15.86,16.27-20,5.92-5.82,18.08-5,21.85-.22,23.44-2.36c.75-1,3-3.44,5.06-5.68A11.61,11.61,0,0,1,115.25,2.61Z"/><path class="b" d="M64.85,135.15a11.92,11.92,0,0,1,1.32-7.8c2.2-3.85,21-25.21,21-25.21"/><path class="b" d="M42,136.86s-1.28-5.58,4.4-12.32c4.14-4.92,23.5-27.74,23.5-27.74"/><path class="b" d="M19.19,133.23s-.71-4.49,3.79-9.83S52,88.57,52,88.57"/><line class="b" x1="49.51" y1="59.08" x2="69.87" y2="34.3"/><line class="b" x1="129.72" y1="65.71" x2="128.84" y2="54.97"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150"><defs><style>.a{fill:none;stroke:#1d1d1b;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3.88px;}</style></defs><path class="a" d="M116.69,3C127,5.86,141.34,14.45,147,39.71a23.54,23.54,0,0,1-5.23,20.92c-5.52,6-12.31,13.51-13,14.85-1.13,2.28.57,9.27-3.41,14.16s-24.08,27.89-28.35,32.88-8.25,9-12.8,7.59-23.33-9.87-23.33-9.87S43.82,141.57,37.65,146a9.35,9.35,0,0,1-13.79-3.75,17.55,17.55,0,0,1,2.7-18.39c4.84-6,18-19.53,18-19.53s-4.17,0-3.6-16.28c0,0-16.65,7-25.18,7.81S2.1,92.41,2.38,84.1,6.36,70.76,15,67.83s24.47-8.51,24.47-8.51-.72-11,1.56-14.61C44.24,39.61,58.3,21.44,63.68,20c4.46-1.22,25,0,25,0L99.29,8.35A17.12,17.12,0,0,1,116.69,3Z"/><path class="a" d="M40.78,58.87s28.59-8.3,29.87-11.23,0-9.76,0-9.76"/><path class="a" d="M40.93,88s23.8-11.67,25.31-10.56S51.85,96.62,44.53,104.29"/><line class="a" x1="60.93" y1="120.24" x2="79.9" y2="98.27"/><line class="a" x1="68.38" y1="111.61" x2="80.75" y2="117.64"/><line class="a" x1="56" y1="88.01" x2="59.04" y2="88.01"/><line class="a" x1="128.82" y1="75.48" x2="128.82" y2="64.57"/><line class="a" x1="88.71" y1="19.97" x2="98.1" y2="19.97"/></svg>
+        </div>
+    </div>
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Placar</h1>
+                <p>Jogador: <span class="player">0</span></p>
+                <p>CPU: <span class="cpuScore">0</span></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="player-1">
+                    <button class="pedra">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150"><defs><style>.a{fill:none;stroke:#1d1d1b;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3.88px;}</style></defs><path class="a" d="M116.69,3C127,5.86,141.34,14.45,147,39.71a23.54,23.54,0,0,1-5.23,20.92c-5.52,6-12.31,13.51-13,14.85-1.13,2.28.57,9.27-3.41,14.16s-24.08,27.89-28.35,32.88-8.25,9-12.8,7.59-23.33-9.87-23.33-9.87S43.82,141.57,37.65,146a9.35,9.35,0,0,1-13.79-3.75,17.55,17.55,0,0,1,2.7-18.39c4.84-6,18-19.53,18-19.53s-4.17,0-3.6-16.28c0,0-16.65,7-25.18,7.81S2.1,92.41,2.38,84.1,6.36,70.76,15,67.83s24.47-8.51,24.47-8.51-.72-11,1.56-14.61C44.24,39.61,58.3,21.44,63.68,20c4.46-1.22,25,0,25,0L99.29,8.35A17.12,17.12,0,0,1,116.69,3Z"/><path class="a" d="M40.78,58.87s28.59-8.3,29.87-11.23,0-9.76,0-9.76"/><path class="a" d="M40.93,88s23.8-11.67,25.31-10.56S51.85,96.62,44.53,104.29"/><line class="a" x1="60.93" y1="120.24" x2="79.9" y2="98.27"/><line class="a" x1="68.38" y1="111.61" x2="80.75" y2="117.64"/><line class="a" x1="56" y1="88.01" x2="59.04" y2="88.01"/><line class="a" x1="128.82" y1="75.48" x2="128.82" y2="64.57"/><line class="a" x1="88.71" y1="19.97" x2="98.1" y2="19.97"/></svg>
+                    </button>
+                    <button class="papel"></button>
+                    <button class="tesoura"></button>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="player-2">
+                    <button class="cpu"></button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <script>
+
+        const placar = [0, 0]
+
+        document.addEventListener('click', function(e){
+            const el = e.target
+            if(el.tagName === 'BUTTON'){
+                const selected = document.querySelectorAll('.selected')
+                selected.forEach(x => x.classList.remove('selected'))
+                const playerChoose = el.className
+                switch(playerChoose){
+                    case "pedra":
+                        el.classList.add("selected")
+                        break
+                    case "papel":
+                        el.classList.add("selected")
+                        break
+                    case "tesoura":
+                        el.classList.add("selected")
+                        break
+                }
+                const cpu = sorteio()
+                resultado(playerChoose, cpu)
+            }
+        })
+
+        function sorteio(){
+            const opcoes = ['pedra', 'papel', 'tesoura']
+            const rand = Math.random() * (3 - 0)
+            return opcoes[Math.floor(rand)]
+        }
+
+        function resultado(playerChoose, cpu){
+            if(playerChoose === 'pedra' && cpu === 'tesoura')
+                return printResult('win', 'lose', cpu)
+            if(playerChoose === 'papel' && cpu === 'pedra')
+                return printResult('win', 'lose', cpu)
+            if(playerChoose === 'tesoura' && cpu === 'papel')
+                return printResult('win', 'lose', cpu)
+            if(playerChoose === cpu)
+                return printResult('tie', 'tie', cpu)
+            return printResult('lose', 'win', cpu)    
+        }
+
+        function printResult(player, cpu, cpuClass){
+            const selected = document.querySelector('.selected')
+            const cpuEl = document.querySelector('.cpu')
+            selected.classList.add(player)
+            cpuEl.classList.add('d-block')
+            cpuEl.classList.add(cpuClass)
+            cpuEl.classList.add(cpu)
+            updateScore(player)
+        }
+
+        function updateScore(winner){
+            const winnerEl = document.querySelector(winner)
+            if(winner === "win"){
+                placar[0] = placar[0]+1
+            }
+            if(winner === "lose"){
+                placar[1] = placar[1]+1
+            }
+            document.querySelector('.player').innerHTML = placar[0]
+            document.querySelector('.cpuScore').innerHTML = placar[1]
+        }
+
+    </script> -->
+</body>
+</html>
