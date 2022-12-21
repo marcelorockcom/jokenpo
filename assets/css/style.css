@@ -26,9 +26,13 @@ body{
     color: var(--main)
 }
 
+a{
+    text-decoration: none;
+    color: var(--main);
+}
+
 h1{
     font-size: 5rem;
-    padding: 3rem;
 }
 
 h1 :nth-child(1){
@@ -63,6 +67,10 @@ button:hover{
 }
 
 .header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     grid-column-start: 1;
     grid-column-end: 4;
     text-align: center;
@@ -203,7 +211,7 @@ input[type="radio"]:checked + label svg path.a{
 }
 
 .lose{
-    background-color: red;
+    background-color: var(--lose);
 }
 
 .tie{
