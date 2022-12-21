@@ -149,6 +149,8 @@ input[type="radio"]:checked + label svg path.a{
     padding: 1rem 1.5rem;
     border-radius: .5rem;
     border: .5rem solid #fff;
+    min-width: 7rem;
+    display: inline-block;
 }
 
 .score-board span:nth-child(2){
@@ -182,10 +184,6 @@ input[type="radio"]:checked + label svg path.a{
     transform: scale(-1, 1);
 }
 
-.player-battle svg{
-    transform: scale(-1, 1);
-}
-
 .cpu-battle{
     margin-left: 30vw;
 }
@@ -195,7 +193,7 @@ input[type="radio"]:checked + label svg path.a{
 }
 
 .win, .lose, .tie{
-    margin: 0;
+    margin: 0 !important;
     opacity: 1;
     transition: all .5s ease-in-out;
 }
@@ -212,6 +210,43 @@ input[type="radio"]:checked + label svg path.a{
     background-color: orange;
 }
 
+.d-block{
+    display: block !important;
+}
+
+.info{
+    position: relative;
+    display: none;
+    width: 20vw;
+    height: 0;
+}
+
+.info p{
+    background-color: var(--main);
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    bottom: 82vh;
+    z-index: 2;
+    margin: 0 auto;
+    position: relative;
+    width: 60%;
+    text-align: center;
+}
+
+.info::after{
+    content: '';
+    width: 0.2rem;
+    height: 0.2rem;
+    display: block;
+    border-color: var(--main) transparent transparent;
+    border-width: 1rem 1rem 0;
+    border-style: solid;
+    bottom: 82vh;
+    position: relative;
+    left: 9vw;
+}
+
 @media (max-width: 667px){
     *{
         -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -222,4 +257,156 @@ input[type="radio"]:checked + label svg path.a{
         height: 4rem;
         margin-top: 1rem;
     }
+
+    h1 {
+        font-size: 5rem;
+        padding: 0
+    }
+
+
+    .player{
+        border: 0;
+        border-top: 1px solid var(--gray)
+    }
+    
+    .cpu{
+        border: 0;
+        border-bottom: 1px solid var(--gray)
+    }
+
+    .player label{
+        transform: scale(-1, -1);
+        cursor: pointer;
+    }
+
+    .game {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        min-height: 10vh;
+    }
+
+    .player {
+        order: 4;
+        grid-column: 1;
+        min-height: 10vh;
+    }
+
+    .battle {
+        min-height: 68vh;
+        order: 2;
+        grid-column: 1;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .cpu {
+        grid-column: 1;
+        order: 1;
+        min-height: 10vh;
+    }
+
+    .player, .cpu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #player{
+        order: 2;
+    }
+
+    .cpu-battle {
+        margin-left: 0;
+        margin-top: -40vh;
+    }
+    
+    .player-battle {
+        margin-left: 0;
+        margin-top: 40vh;
+    }
+
+    .playerXcpu{
+        min-height: 34vh;
+        max-height: 34vh;
+    }
+    
+    .playerXcpu svg {
+        width: 30%;
+    }
+    
+    .cpu-battle svg {
+        margin-top: 9rem;
+    }
+    
+    .player-battle svg {
+        margin-bottom: 9rem;
+    }
+
+    .player-battle svg{
+        transform: scale(-1, -1);
+    }
+
+    .score-board {
+        font-size: 2rem;
+        left: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        top: initial;
+        align-self: center;
+    }
+
+    .score-board span:nth-child(odd) {
+        min-width: 6rem;
+        justify-content: center;
+    }
+
+    .score-board :nth-child(1){
+        display: flex;
+        order: 3;
+    }
+    .score-board :nth-child(2){
+        display: flex;
+        order: 2;
+    }
+    .score-board :nth-child(3){
+        display: flex;
+        order: 1;
+    }
+
+    .info{
+        position: relative;
+        display: none;
+        height: 3rem;
+        width: 100vw;
+    }
+
+    .info p{
+        background-color: var(--main);
+        color: #fff;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        position: relative;
+        bottom: 13vh;
+        z-index: 2;
+    }
+
+    .info::after{
+        content: '';
+        width: .2rem;
+        height: .2rem;
+        display: block;
+        margin: 0 auto;
+        border-color: var(--main) transparent transparent;
+        border-width: 1rem 1rem 0;
+        border-style: solid;
+        bottom: 13.5vh;
+        position: relative;
+        left: initial;
+    }
+
 }

@@ -8,6 +8,7 @@
             this.scoreCpu = document.querySelector('.score-cpu')
             this.playerBattle = document.querySelector('.player-battle')
             this.cpuBatte = document.querySelector('.cpu-battle')
+            this.info = document.querySelector('.info')
             this.score = {player: 0, cpu: 0}
         }
 
@@ -16,6 +17,7 @@
                 if(e.target.tagName === 'INPUT'){
                     this.playerBattle.className = 'player-battle'
                     this.cpuBatte.className = 'cpu-battle'
+                    this.info.classList.remove('d-block')
                 }
             })
 
@@ -26,7 +28,7 @@
                     this.result(playerChosen.id, cpuChosen)
                     this.insertSvg(playerChosen.id, cpuChosen)
                 }else{
-                    alert('Choose an option')
+                    this.info.classList.add('d-block')
                 }
             })
         }
